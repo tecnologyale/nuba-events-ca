@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NUBA EVENTS CA</title>
+  <meta name="description" content="Elegant balloon décor and event styling by NUBA EVENTS CA." />
+  <style>
+    :root {
+      --royal-blue: #0a30a5;
+      --gold: #d5b039;
+      --ivory: #fdfcf8;
+      --text: #1f1f1f;
+      --white: #ffffff;
+      --shadow: 0 15px 40px rgba(10, 48, 165, 0.14);
+      --radius: 24px;
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--ivory);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand-font {
+      font-family: "Giaza Stencil", Georgia, serif;
+      letter-spacing: 1px;
+    }
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      background: var(--royal-blue);
+      color: var(--white);
+      padding: 14px 0;
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(253, 252, 248, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(10, 48, 165, 0.08);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+      gap: 16px;
+    }
+
+    .logo {
+      color: var(--royal-blue);
+      font-size: clamp(1.4rem, 2vw, 2rem);
+      font-weight: 700;
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--royal-blue);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: 0.25s ease;
+    }
+
+    .btn-primary {
+      background: var(--royal-blue);
+      color: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: #082889;
+    }
+
+    .btn-secondary {
+      border: 2px solid var(--gold);
+      color: var(--royal-blue);
+      background: transparent;
+    }
+
+    .btn-secondary:hover {
+      background: var(--gold);
+      color: var(--white);
+    }
+
+    .hero {
+      padding: 80px 0 50px;
+      background: linear-gradient(135deg, rgba(10, 48, 165, 0.08), rgba(213, 176, 57, 0.12));
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: rgba(213, 176, 57, 0.16);
+      color: var(--royal-blue);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.6rem, 5vw, 5rem);
+      line-height: 1.05;
+      color: var(--royal-blue);
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      font-size: 1.08rem;
+      max-width: 620px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 26px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .badge {
+      background: var(--white);
+      border: 1px solid rgba(10, 48, 165, 0.08);
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    .hero-card {
+      background: var(--white);
+      padding: 18px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card img {
+      border-radius: 20px;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 44px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--royal-blue);
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      color: #555;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(10, 48, 165, 0.06);
+    }
+
+    .card h3 {
+      color: var(--royal-blue);
+      margin-bottom: 12px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .gallery-item {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 540px;
+      object-fit: cover;
+    }
+
+    .gallery-caption {
+      padding: 18px 20px;
+    }
+
+    .gallery-caption h3 {
+      color: var(--royal-blue);
+      margin-bottom: 6px;
+    }
+
+    .cta {
+      background: var(--royal-blue);
+      color: var(--white);
+      border-radius: 32px;
+      padding: 48px 32px;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      max-width: 680px;
+      margin: 0 auto 24px;
+      color: rgba(255, 255, 255, 0.88);
+    }
+
+    footer {
+      padding: 34px 0;
+      text-align: center;
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .services-grid,
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .gallery-item img {
+        height: 420px;
+      }
+
+      .hero {
+        padding-top: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    Elegant event styling for birthdays, celebrations, and special moments.
+  </div>
+
+  <header>
+    <div class="container navbar">
+      <a href="#home" class="logo brand-font">NUBA <span>EVENTS CA</span></a>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-primary" href="#contact">Book Now</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Luxury balloon styling & event décor</span>
+          <h1 class="brand-font">NUBA EVENTS CA</h1>
+          <p>
+            We create beautiful event setups that feel elevated, memorable, and made just for your celebration.
+            From birthdays to custom party styling, we bring your vision to life with elegant details and standout designs.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#gallery">View Our Work</a>
+            <a class="btn btn-secondary" href="#contact">Get a Quote</a>
+          </div>
+          <div class="hero-badges">
+            <span class="badge">Custom Balloon Garlands</span>
+            <span class="badge">Kids Birthday Setups</span>
+            <span class="badge">Styled Party Backdrops</span>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <img src="670869481_18099136775512507_5215525391845177283_n.jpg" alt="Colorful race car themed birthday setup by NUBA EVENTS CA" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="brand-font">What We Do</h2>
+          <p>
+            We help make your events look polished, festive, and photo-ready with custom styling tailored to your theme.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="card">
+            <h3>Balloon Installations</h3>
+            <p>
+              Organic balloon garlands, themed color palettes, and statement arrangements designed to make your event stand out.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Backdrop Styling</h3>
+            <p>
+              Clean, modern, and eye-catching backdrops that create the perfect focal point for photos and gifts.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Custom Celebrations</h3>
+            <p>
+              Birthday parties, kids events, and special occasions styled with care so every detail feels intentional.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="brand-font">Featured Work</h2>
+          <p>
+            Here is a sample of the event styling and themed setups we create for our clients.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <article class="gallery-item">
+            <img src="670869481_18099136775512507_5215525391845177283_n.jpg" alt="Birthday setup with checkered balloons and gift display" />
+            <div class="gallery-caption">
+              <h3>Race Theme Birthday Setup</h3>
+              <p>Bold colors, fun details, and a clean backdrop design for a memorable kids celebration.</p>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <img src="670409356_18099136778512507_1537607929584284215_n.jpg" alt="Birthday decor arrangement with themed balloons and presents" />
+            <div class="gallery-caption">
+              <h3>Custom Styled Party Corner</h3>
+              <p>A polished event corner designed to highlight the gifts, theme, and special moment.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta" id="contact">
+          <h2 class="brand-font">Let’s Create Something Beautiful</h2>
+          <p>
+            Ready to style your next event? Contact NUBA EVENTS CA and let’s create a setup your guests will remember.
+          </p>
+          <a class="btn btn-secondary" href="mailto:your@email.com">Contact Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 NUBA EVENTS CA. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
